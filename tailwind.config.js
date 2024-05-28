@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,10 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        'typing': 'typing 2s steps(20, end) infinite',
+        'blink': 'blink 1s step-end infinite'
+      },
+      keyframes: {
+        typing: {
+          'from': { width: '0%' },
+          'to': { width: '100%' },
+        },
+        blink: {
+          '50%': { borderColor: 'transparent' },
+        },
       },
     },
   },
